@@ -6,7 +6,7 @@ function updateBackground() {
     bstyle = body.style;   
   if (hr < 10) {
     bstyle.backgroundColor = "#FF9300";
-  } else if (hr < 20) {
+  } else if (hr < 19) {
     bstyle.backgroundColor = "#ACEDFF";
   } else {
     bstyle.backgroundColor = "#375DE0";

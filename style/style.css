@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial;
   color: #222;
@@ -29,11 +33,35 @@ h1 {
     letter-spacing: 7px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 2px;
+    animation:blinkingText 2s infinite;
 }
 
 p {
   text-align: center;
 }
+
+@keyframes blinkingText{
+  0%{   
+    color: #000;  
+  }
+  25%{  
+    color: #5AFF73;
+    margin-left: 2px;  
+  }
+  50%{  
+    color: #000;
+    margin-right: 2px;  
+  }
+  75%{  
+    color: #FE5443; 
+    margin-bottom: 2px;  
+  }
+  100%{ 
+    color: #000; 
+    margin-top: 2px;  
+  }
+}
+
 
 /*Responsive*/
 
