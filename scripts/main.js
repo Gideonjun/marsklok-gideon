@@ -4,7 +4,7 @@ function updateBackground() {
     hr = (new Date()).getHours(),
     body = document.body,
     bstyle = body.style;   
-  if (hr < 10) {
+  if (hr < 11) {
     bstyle.backgroundColor = "#FF9300";
   } else if (hr < 19) {
     bstyle.backgroundColor = "#ACEDFF";
@@ -50,34 +50,3 @@ function showTime(){
 }
 
 showTime();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//document.getElementById('clock').innerHTML = today.toString();
-
-//document.getElementById('clock').innerHTML = today.getMonth() + 1;
-
-//document.getElementById('clock').innerHTML = today.getYear(); // - 1900
-//document.getElementById('clock').innerHTML = today.getFullYear();
-// document.getElementById('clock').innerHTML = today.getDate();
-// document.getElementById('clock').innerHTML = today.getDay();
-//document.getElementById('clock').innerHTML = today.getHours();
-
-
-//document.getElementById('clock').innerHTML = today.getMinutes();
-//document.getElementById('clock').innerHTML = today.getSeconds();
-//document.getElementById('clock').innerHTML = today.getMilliseconds();
-//document.getElementById('clock').innerHTML = today.getTime();
