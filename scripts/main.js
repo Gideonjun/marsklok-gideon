@@ -1,14 +1,3 @@
-// function leadingZero(number){
-// 	if (number < 10){
-// 		return '0'+ number;
-// 	}
-// 	else {
-// 		return number;
-// 	}
-// }
-// var today = new Date();
-//  var formatTime = today.getHours() + ':' + leadingZero(today.getMinutes()) + ':' + leadingZero(today.getSeconds());
-// document.getElementById('clock').innerHTML = formatDate + ' - ' + formatTime;
 
 function updateBackground() {
   var 
@@ -20,7 +9,7 @@ function updateBackground() {
   } else if (hr < 20) {
     bstyle.backgroundColor = "#33DDF7";
   } else {
-    bstyle.backgroundColor = "#000";
+    bstyle.backgroundColor = "#1B15A0";
   } 
 }
 
@@ -37,29 +26,7 @@ function showTime(){
     var days = ['SUN', 'MON', 'TUE', 'WEN', 'THU', 'FRI', 'SAT'];
     var currentday = date.getDate();
     
-    var formatDate = days[date.getDay()] + ", " + currentday+ " " + maanden[date.getMonth()] + " " + date.getFullYear();
-
-
-    // if (0 <= h && h < 20) {
-    //     if (document.body) {
-    //         document.body.style.backgroundImage = "url('../images/clouds.png')";
-    //     } else {
-    // if (document.body) {
-    //     document.body.style.backgroundImage = "url('../images/night.jpg')";
-    //     }
-    // }
-
-//     if (7 <= currentTime && currentTime < 20) {
-//     if (document.body) {
-//         document.body.style.backgroundImage = "url('clouds.jpg')";
-// }
-//     } else {
-//     if (document.body) {
-//         document.body.style.backgroundImage = "url('night.jpg')";
-//     }
-// }
-    
-    
+    var formatDate = days[date.getDay()] + ", " + currentday+ " " + maanden[date.getMonth()] + " " + date.getFullYear();  
     
     if(h == 0){
         h = 12;
