@@ -1,18 +1,15 @@
 body {
   font-family: Arial;
   color: #222;
-  background: black;
+
 }
 
-/*.container {
-  min-width: 550px;
-  margin: 100px auto;
-  border: 20px solid #e1e1e1;
-  background-color: #ccc;
+.container {
+  display: flex;
   text-align: center;
-  border-radius: 20px;
+  flex-basis: 100%;
 }
-*/
+
 h1 {
   font-size: 100px;
   position: relative;
@@ -22,15 +19,84 @@ h1 {
 
 .clock {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     color: #000;
     font-family: Arial;
     letter-spacing: 7px;
-
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
 }
 
 p {
   text-align: center;
 }
+
+/*Responsive*/
+
+/*Mobiel*/
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    display: flex;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .clock {
+    width: 490px;
+  }
+}
+
+/*Einde mobiel*/
+
+/*Tablet*/
+@media only screen and (min-width: 601px) and (max-width: 904px) {
+  .container {
+    width: 100%;
+    display: flex;
+  }
+
+    h1 {
+    font-size: 75px;
+  }
+
+  .clock {
+    width: 620px;
+  }
+}
+
+/*Einde tablet*/
+
+/*Klein desktop*/
+@media only screen and (min-width: 905px) and (max-width: 1174px){
+  .container {
+    width: 100%;
+    display: flex;
+  }
+
+  .clock {
+    width: 850px;
+  }
+}
+
+/*Einde klein desktop*/
+
+/*Full desktop*/
+@media only screen and (min-width: 1175px) {
+  .container {
+    width: 10
+    0%;
+    display: flex;
+  }
+
+  .clock {
+    width: 1150px;
+  }
+}
+/*Eind full desktop*/

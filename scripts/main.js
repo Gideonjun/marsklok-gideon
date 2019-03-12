@@ -7,9 +7,9 @@ function updateBackground() {
   if (hr < 10) {
     bstyle.backgroundColor = "#FF9300";
   } else if (hr < 20) {
-    bstyle.backgroundColor = "#33DDF7";
+    bstyle.backgroundColor = "#ACEDFF";
   } else {
-    bstyle.backgroundColor = "#1B15A0";
+    bstyle.backgroundColor = "#375DE0";
   } 
 }
 
@@ -26,7 +26,9 @@ function showTime(){
     var days = ['SUN', 'MON', 'TUE', 'WEN', 'THU', 'FRI', 'SAT'];
     var currentday = date.getDate();
     
-    var formatDate = days[date.getDay()] + ", " + currentday+ " " + maanden[date.getMonth()] + " " + date.getFullYear();  
+    var formatDate = days[date.getDay()] + ", " + currentday+ " " + maanden[date.getMonth()] + " " + date.getFullYear();
+    
+    
     
     if(h == 0){
         h = 12;
