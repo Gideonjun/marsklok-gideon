@@ -6,20 +6,26 @@
 // 		return number;
 // 	}
 // }
-
-
 // var today = new Date();
-
-
-// var maanden = ['jan', 'feb', 'mar', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
-
-// var formatDate = maanden[today.getMonth()] + '-' + today.getDate() + '-' + today.getFullYear();
-
-// document.getElementById('clock').innerHTML = formatDate;
-
 //  var formatTime = today.getHours() + ':' + leadingZero(today.getMinutes()) + ':' + leadingZero(today.getSeconds());
-
 // document.getElementById('clock').innerHTML = formatDate + ' - ' + formatTime;
+
+function updateBackground() {
+  var 
+    hr = (new Date()).getHours(),
+    body = document.body,
+    bstyle = body.style;   
+  if (hr < 10) {
+    bstyle.backgroundColor = "#FF9300";
+  } else if (hr < 20) {
+    bstyle.backgroundColor = "#33DDF7";
+  } else {
+    bstyle.backgroundColor = "#000";
+  } 
+}
+
+setInterval(updateBackground, 1000 * 60);
+updateBackground();
 
 function showTime(){
     var date = new Date();
@@ -27,6 +33,33 @@ function showTime(){
     var m = date.getMinutes(); // 0 - 59
     var s = date.getSeconds(); // 0 - 59
     var session = "AM";
+    var maanden = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+    var days = ['SUN', 'MON', 'TUE', 'WEN', 'THU', 'FRI', 'SAT'];
+    var currentday = date.getDate();
+    
+    var formatDate = days[date.getDay()] + ", " + currentday+ " " + maanden[date.getMonth()] + " " + date.getFullYear();
+
+
+    // if (0 <= h && h < 20) {
+    //     if (document.body) {
+    //         document.body.style.backgroundImage = "url('../images/clouds.png')";
+    //     } else {
+    // if (document.body) {
+    //     document.body.style.backgroundImage = "url('../images/night.jpg')";
+    //     }
+    // }
+
+//     if (7 <= currentTime && currentTime < 20) {
+//     if (document.body) {
+//         document.body.style.backgroundImage = "url('clouds.jpg')";
+// }
+//     } else {
+//     if (document.body) {
+//         document.body.style.backgroundImage = "url('night.jpg')";
+//     }
+// }
+    
+    
     
     if(h == 0){
         h = 12;
@@ -42,7 +75,7 @@ function showTime(){
     s = (s < 10) ? "0" + s : s;
     
     var time = h + ":" + m + ":" + s + " " + session;
-    document.getElementById("Glock").innerHTML = time;
+    document.getElementById("Glock").innerHTML = "<h1>" + time + "</h1><p>" + formatDate + "</p>";
     setTimeout(showTime, 1000);
     
 }
