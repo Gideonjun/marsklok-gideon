@@ -32,7 +32,7 @@ h1 {
     letter-spacing: 7px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 2px;
-    animation:blinkingText 8s infinite;
+    animation:blinkingText 2s infinite;
 }
 
 p {
@@ -45,19 +45,19 @@ p {
   }
   25%{  
     color: #5AFF73;
-    margin-left: 2px;  
+    margin-left: 5px;  
   }
   50%{  
-    color: #FFE41E;
-    margin-right: 2px;  
+    color: #000;
+    margin-top: 5px;  
   }
   75%{  
     color: #FE5443; 
-    margin-bottom: 2px;  
+    margin-right: 5px;
   }
   100%{ 
     color: #000; 
-    margin-top: 2px;  
+    margin-bottom: 5px;  
   }
 }
 
